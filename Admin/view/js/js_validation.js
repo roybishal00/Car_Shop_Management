@@ -1,6 +1,6 @@
 
 function validateForm() {
-    // Validate First Name
+    
     const name = document.getElementById("Name").value.trim();
     if (!name) {
         alert("First Name is required.");
@@ -11,7 +11,7 @@ function validateForm() {
         return false;
     }
 
-    // Validate email
+   
     const email = document.getElementById("email").value.trim();
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!email) {
@@ -23,7 +23,7 @@ function validateForm() {
         return false;
     }
 
-    // Validate phone number
+    
     const phone = document.getElementById("phone").value.trim();
     const phoneRegex = /^[0-9]{10,15}$/;
     if (!phone) {
@@ -35,7 +35,7 @@ function validateForm() {
         return false;
     }
 
-    // Validate password
+    
     const password = document.getElementById("password").value.trim();
     const confirmPassword = document.getElementById("confirmPassword").value.trim();
     if (!password) {
@@ -51,13 +51,13 @@ function validateForm() {
         return false;
     }
 
-    // Validate gender
+  
     const gender = document.getElementById("gender").value;
     if (!gender) {
         alert("Please select a gender.");
         return false;
     }
 
-    // If all validations pass
+    
     return true;
 }
