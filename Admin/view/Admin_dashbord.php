@@ -91,14 +91,26 @@ require_once '../Control/picture_control.php';
                 </tr>
             </table>
         </div>
-        <div class = "picture-upload">
-            <form action="" method="POST" enctype="multipart/form-data">
-                <h3>Product Picture </h3>
-                <input type="file" name="uploadPicture">
-                <button name ="submit" onclick = "disableButton(this)">Upload</button>
-            </form> 
+        <form id="carForm" action="" method="" enctype="multipart/form-data">
+    <label>Car Name:</label>
+    <input type="text" name="car_name"><br>
 
-        </div>
+    <label>Car Price:</label>
+    <input type="number" name="car_price" step="0.01"><br>
+
+    <label>Car Buy Year:</label>
+    <input type="number" name="car_buy_year" min="1900" max="2099"><br>
+
+    <label>Car Mileage:</label>
+    <input type="number" name="car_milage"><br>
+
+    <label>Car Image:</label>
+    <input type="file" name="uploadPicture" accept="image/*"><br>
+
+    <button type="submit" onclick = "submitCarForm()">Upload Car</button>
+      </form>
+
+      <p id="statusMessage"></p>
 
 
         <div class="new-students">
